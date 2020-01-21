@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class deathOnContact : MonoBehaviour
+public class playerDeath : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,11 +16,9 @@ public class deathOnContact : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    public void Die()
     {
-        if (other.collider.tag == "Player")
-        {
-            other.collider.gameObject.GetComponent<playerDeath>().Die();
-        }
+        GameObject.FindGameObjectWithTag("Objectives").GetComponent<objectivesDisplay>().addStep((objectivesDisplay.Objectives)GetComponent<colorGroup>().color - 1);
+        Destroy(gameObject);
     }
 }

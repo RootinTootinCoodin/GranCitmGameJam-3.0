@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 95557039}
   m_Layer: 5
   m_Name: Objectives
-  m_TagString: Untagged
+  m_TagString: Objectives
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
   barHeight: 200
   margins: 5
   step: {fileID: 9003593980428542426, guid: 19625bd43c86fe84fb274fc070f8af69, type: 3}
-  isPreview: 1
+  isPreview: 0
   objectives: 020000000200000002000000010000000100000000000000
   green: {fileID: 11400000, guid: 7f9fdeda685d0e140850c7e323a7d7a0, type: 2}
   yellow: {fileID: 11400000, guid: 06332e82d1e268548854f497a3ef0d4d, type: 2}
