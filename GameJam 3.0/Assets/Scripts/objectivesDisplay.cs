@@ -10,6 +10,7 @@ public class objectivesDisplay : MonoBehaviour
 
     public GameObject step;
     public bool isPreview = false;
+    public objectivesDisplay reference;
 
     public enum Objectives
     {
@@ -44,10 +45,20 @@ public class objectivesDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isPreview && count >= objectives.Length)
+        {
+            Debug.Log(objectives.Length);
+            Win();
+        }
     }
 
     public void addStep(Objectives color)
     {
+        if (color != objectives[count])
+        {
+            Lose();
+        }
+
         GameObject go = Instantiate(step, transform);
 
         go.GetComponent<RectTransform>().localPosition = new Vector3(0.0f, ((stepheight + margins) * count + stepheight / 2));
@@ -68,6 +79,16 @@ public class objectivesDisplay : MonoBehaviour
         
 
         count++;
+    }
+
+    public void Win()
+    {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<gameController>().Win();
+    }
+
+    public void Lose()
+    {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<gameController>().Lose();
     }
 
     public Vector3 getNextPosition()
