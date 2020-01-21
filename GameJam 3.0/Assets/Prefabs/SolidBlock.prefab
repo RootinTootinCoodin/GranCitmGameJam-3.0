@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5259652166422188665}
   - component: {fileID: 4767957265272008085}
   m_Layer: 0
-  m_Name: Static 2way
+  m_Name: SolidBlock
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
