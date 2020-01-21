@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1280954733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712440543877072411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd04c9191e454a4c9d0076122a360d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 0
+  speed: 5
+  distance: 10
 --- !u!1001 &8582420642892773436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15,12 +30,12 @@ PrefabInstance:
     - target: {fileID: 4944916223991709221, guid: 817740fce4cd5bb4ab53bdd43cbd0abb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.21
       objectReference: {fileID: 0}
     - target: {fileID: 4944916223991709221, guid: 817740fce4cd5bb4ab53bdd43cbd0abb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4944916223991709221, guid: 817740fce4cd5bb4ab53bdd43cbd0abb,
         type: 3}
@@ -67,5 +82,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4944916223991709221, guid: 817740fce4cd5bb4ab53bdd43cbd0abb,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.07208
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944916223991709219, guid: 817740fce4cd5bb4ab53bdd43cbd0abb,
+        type: 3}
+      propertyPath: m_UseOneWay
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 817740fce4cd5bb4ab53bdd43cbd0abb, type: 3}
+--- !u!1 &3712440543877072411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4944916223991709223, guid: 817740fce4cd5bb4ab53bdd43cbd0abb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8582420642892773436}
+  m_PrefabAsset: {fileID: 0}
