@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerDeath : MonoBehaviour
 {
+    public GameObject particles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +19,9 @@ public class playerDeath : MonoBehaviour
     }
 
     public void Die()
-    {
-        GameObject.FindGameObjectWithTag("Objectives").GetComponent<objectivesDisplay>().addStep((objectivesDisplay.Objectives)GetComponent<colorGroup>().color - 1);
+    {       
+        GameObject go = Instantiate(particles, transform.position, transform.rotation);
+        go.GetComponent<objectiveBehavior>().objective = (objectivesDisplay.Objectives)GetComponent<colorGroup>().color - 1;
         Destroy(gameObject);
     }
 }

@@ -44,7 +44,6 @@ public class objectivesDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void addStep(Objectives color)
@@ -69,5 +68,13 @@ public class objectivesDisplay : MonoBehaviour
         
 
         count++;
+    }
+
+    public Vector3 getNextPosition()
+    {
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y+((stepheight + margins) * count + stepheight / 2)/1);
+        Vector3 cameraPos = Camera.main.ScreenToWorldPoint(pos);
+        cameraPos.z = 0.0f;
+        return cameraPos;
     }
 }

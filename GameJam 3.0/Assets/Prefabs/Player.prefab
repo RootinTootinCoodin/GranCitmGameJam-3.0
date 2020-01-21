@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  jumpForce: 600
+  jumpForce: 700
 --- !u!114 &4574721034576947216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +158,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c30f00e070729439ea07e1a11761fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 5920721327369646182, guid: 8751222886d36d94e84f817c96347d1b,
+    type: 3}
