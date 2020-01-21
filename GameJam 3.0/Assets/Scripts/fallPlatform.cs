@@ -28,7 +28,7 @@ public class fallPlatform : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Coolide");
+        //Debug.Log("Coolide");
         if (!countdown && other.collider.tag == "Player")
         {
             countdown = true;
