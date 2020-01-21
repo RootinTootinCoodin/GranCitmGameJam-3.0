@@ -13,7 +13,7 @@ public class colorGroup : MonoBehaviour
 
     SpriteRenderer sprite;
 
-    void OnValidate()
+    public void UpdateColor()
     {
         if (sprite == null)
         {
@@ -42,6 +42,11 @@ public class colorGroup : MonoBehaviour
                 sprite.color = colorRed.value;
             }
         }
+    }
+
+    void OnValidate()
+    {
+        UpdateColor();
     }
 
     public static int layermask_to_layer(LayerMask layerMask)
