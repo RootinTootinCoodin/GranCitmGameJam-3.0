@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 4944916223991709223, guid: 817740fce4cd5bb4ab53bdd43cbd0abb,
         type: 3}
       propertyPath: m_Name
-      value: Moving 2way
+      value: MovingPlatformSolid
       objectReference: {fileID: 0}
     - target: {fileID: 4944916223991709221, guid: 817740fce4cd5bb4ab53bdd43cbd0abb,
         type: 3}
