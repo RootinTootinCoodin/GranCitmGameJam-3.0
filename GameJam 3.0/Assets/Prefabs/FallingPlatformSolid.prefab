@@ -21,20 +21,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1068722272553731701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699377649742239866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd75ebb23578f1540bf7b63db880b700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallTime: 2
-  fallSpeed: 1
 --- !u!82 &2578515431402321643
 AudioSource:
   m_ObjectHideFlags: 0
@@ -131,6 +117,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1068722272553731701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699377649742239866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd75ebb23578f1540bf7b63db880b700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallTime: 2
+  fallSpeed: 1
 --- !u!1001 &6875711573787838983
 PrefabInstance:
   m_ObjectHideFlags: 0
