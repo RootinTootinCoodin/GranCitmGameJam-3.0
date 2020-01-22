@@ -17,7 +17,7 @@ public class LaserAnimation : MonoBehaviour
     void Update()
     {
   
-        if(!LeanTween.isTweening())
+        if(!LeanTween.isTweening(gameObject))
                 if(transform.localScale.y < 1.0f)
                     transform.LeanScaleY(1.0f, anim_speed);
                 else

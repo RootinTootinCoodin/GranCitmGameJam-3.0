@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7477779154973927173}
   - component: {fileID: 5014255074639733604}
   - component: {fileID: 3147919993205978327}
-  - component: {fileID: 6169595266773628341}
-  m_Layer: 10
+  - component: {fileID: 8483578025223410043}
+  m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 6706767375056806867, guid: 79c294cb305f6ed4eb753587e9190282,
     type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,12 +136,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849cb8d2350de174cbbe3bf692fd4500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 3
+  color: 0
   colorGreen: {fileID: 11400000, guid: 7f9fdeda685d0e140850c7e323a7d7a0, type: 2}
   colorYellow: {fileID: 11400000, guid: 06332e82d1e268548854f497a3ef0d4d, type: 2}
   colorRed: {fileID: 11400000, guid: aed57c4ee4eda5c44b6753e84895b131, type: 2}
-<<<<<<< HEAD
---- !u!114 &6169595266773628341
+  materialGreen: {fileID: 0}
+  materialYellow: {fileID: 0}
+  materialRed: {fileID: 0}
+--- !u!114 &8483578025223410043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,8 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee2ca879004d4b45b9cfdd4aa42a407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
-  materialGreen: {fileID: 0}
-  materialYellow: {fileID: 0}
-  materialRed: {fileID: 0}
->>>>>>> 80d55ac8610320cbb3ac27b6cc30e9d9185b3d44
+  anim_speed: 0.5
+  reduction_limit: 0.7
