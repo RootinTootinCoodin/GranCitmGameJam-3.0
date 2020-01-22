@@ -138,6 +138,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7941133808575316799}
     m_Modifications:
+    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
+        type: 3}
+      propertyPath: m_Name
+      value: Laser
+      objectReference: {fileID: 0}
     - target: {fileID: 5737695356875533521, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,11 +197,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
-        type: 3}
-      propertyPath: m_Name
-      value: Laser
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfc0a2a7e152e60489a5c97cdfdbd579, type: 3}
@@ -363,6 +363,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7941133808575316799}
     m_Modifications:
+    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
+        type: 3}
+      propertyPath: m_Name
+      value: Laser (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5737695356875533521, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -417,16 +427,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
-        type: 3}
-      propertyPath: m_Name
-      value: Laser (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8739777116599831243, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
         type: 3}
@@ -474,6 +474,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7941133808575316799}
     m_Modifications:
+    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
+        type: 3}
+      propertyPath: m_Name
+      value: Laser (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5737695356875533521, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -528,16 +538,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
-        type: 3}
-      propertyPath: m_Name
-      value: Laser (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3060924492449144822, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8739777116599831243, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
         type: 3}
