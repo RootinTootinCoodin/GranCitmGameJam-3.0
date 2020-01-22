@@ -8,12 +8,17 @@ public class gameController : MonoBehaviour
     public GameObject winMenu;
     public GameObject loseMenu;
 
+    public AudioClip winClip;
+    public AudioClip loseClip;
+
+    AudioSource audioSource;
+
     bool finished = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +32,8 @@ public class gameController : MonoBehaviour
         if (!finished)
         {
             winMenu.SetActive(true);
+            audioSource.clip = winClip;
+            audioSource.Play();
             finished = true;
             StartCoroutine(loadNextScene());
         }
@@ -37,6 +44,8 @@ public class gameController : MonoBehaviour
         if (!finished)
         {
             loseMenu.SetActive(true);
+            audioSource.clip = loseClip;
+            audioSource.Play();
             finished = true;
             StartCoroutine(loadCurrentScene());
         }
