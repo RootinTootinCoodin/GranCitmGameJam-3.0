@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1221,6 +1221,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 98416250157815533, guid: afafc0d8e4f8a2043a69fdda35573b1f,
+        type: 3}
+      propertyPath: m_Name
+      value: Grid
+      objectReference: {fileID: 0}
     - target: {fileID: 207263681140383674, guid: afafc0d8e4f8a2043a69fdda35573b1f,
         type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[1].Array.size
@@ -4410,11 +4415,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[64].y
       value: -7.9985642
-      objectReference: {fileID: 0}
-    - target: {fileID: 98416250157815533, guid: afafc0d8e4f8a2043a69fdda35573b1f,
-        type: 3}
-      propertyPath: m_Name
-      value: Grid
       objectReference: {fileID: 0}
     - target: {fileID: 6547134244225787335, guid: afafc0d8e4f8a2043a69fdda35573b1f,
         type: 3}
@@ -19073,7 +19073,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1865367300}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1865367298}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1865367300
