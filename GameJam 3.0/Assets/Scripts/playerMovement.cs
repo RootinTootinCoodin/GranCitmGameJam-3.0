@@ -26,6 +26,7 @@ public class playerMovement : MonoBehaviour
 
     AudioSource playerSound;
     public AudioClip jump;
+    public AudioClip fallSound;
 
     Vector2 movement;
     Rigidbody2D rb;
@@ -114,8 +115,15 @@ public class playerMovement : MonoBehaviour
                         newState = State.IDLE;
                     else
                         newState = State.WALKING;
+
+                    playerSound.clip = fallSound;
+                    playerSound.Play();
                 }
-            }         
+            }  
+            else if (other.GetContact(0).normal == -Vector2.up && currentState != State.JUMPING)
+            {
+                GetComponent<playerDeath>().Die();
+            }
         }
     }
 
