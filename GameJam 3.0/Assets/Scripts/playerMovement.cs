@@ -24,6 +24,9 @@ public class playerMovement : MonoBehaviour
     Animator animator;
     SpriteRenderer sprite;
 
+    AudioSource playerSound;
+    public AudioClip jump;
+
     Vector2 movement;
     Rigidbody2D rb;
 
@@ -33,6 +36,9 @@ public class playerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        playerSound = GetComponent<AudioSource>();
+
+
 
         actions = new PlayerActions();
 
@@ -55,6 +61,8 @@ public class playerMovement : MonoBehaviour
             {
                 case State.JUMPING:
                     animator.SetTrigger("Jump");
+                    playerSound.clip = jump;
+                    playerSound.Play();
                 break;
                 case State.WALKING:
                     animator.SetTrigger("Walk");
