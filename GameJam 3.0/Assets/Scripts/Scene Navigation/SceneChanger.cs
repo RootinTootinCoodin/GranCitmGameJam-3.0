@@ -8,7 +8,7 @@ public class SceneChanger : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    string sceneToLoad;
+    string sceneToLoad = "1";
 
     public void UpdateSceneToLoad(string new_text)
     {
@@ -19,5 +19,19 @@ public class SceneChanger : MonoBehaviour
     {
         string scene = "Level" + sceneToLoad;
         SceneManager.LoadScene(scene);
+    }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("CreditsScene");
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
