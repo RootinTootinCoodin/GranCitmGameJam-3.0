@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerDeath : MonoBehaviour
 {
     public GameObject particles;
+    bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +20,13 @@ public class playerDeath : MonoBehaviour
     }
 
     public void Die()
-    {       
-        GameObject go = Instantiate(particles, transform.position, transform.rotation);
-        go.GetComponent<objectiveBehavior>().objective = (objectivesDisplay.Objectives)GetComponent<colorGroup>().color - 1;
-        Destroy(gameObject);
+    {
+        if (!dead)
+        {
+            dead = true;
+            GameObject go = Instantiate(particles, transform.position, transform.rotation);
+            go.GetComponent<objectiveBehavior>().objective = (objectivesDisplay.Objectives)GetComponent<colorGroup>().color - 1;
+            Destroy(gameObject);
+        }
     }
 }
