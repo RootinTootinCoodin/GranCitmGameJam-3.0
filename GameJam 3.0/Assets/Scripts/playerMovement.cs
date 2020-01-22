@@ -30,6 +30,8 @@ public class playerMovement : MonoBehaviour
 
     Vector2 movement;
     Rigidbody2D rb;
+    Collider2D collider;
+    public LayerMask mask;
 
     // Start is called before the first frame update
     void Awake()
@@ -59,6 +61,15 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         Stop();
+        collider = GetComponent<Collider2D>();
+    }
+
+    void Update()
+    {
+        if (currentState == State.JUMPING && Physics2D.Raycast(collider.bounds.center, Vector2.down, collider.bounds.extents.y + 0.05f, mask))
+        {
+            newState = State.IDLE;
+        }
     }
 
     // Update is called once per frame
