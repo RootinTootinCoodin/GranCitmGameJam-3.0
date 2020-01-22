@@ -1311,6 +1311,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7060631117620774642, guid: afafc0d8e4f8a2043a69fdda35573b1f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 3692287425620398042, guid: afafc0d8e4f8a2043a69fdda35573b1f,
         type: 3}
       propertyPath: m_Tiles.Array.size
