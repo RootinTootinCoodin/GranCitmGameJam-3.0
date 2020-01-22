@@ -16,7 +16,7 @@ public class MusicChanger : MonoBehaviour
     {
         audioSource.Stop();
         audioSource.clip = clip;
-        audioSource.volume = 0.02f;
+        audioSource.volume = 0.04f;
         audioSource.Play();
     }
 }
