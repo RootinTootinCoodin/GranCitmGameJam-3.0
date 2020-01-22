@@ -32,7 +32,6 @@ public class playerMovement : MonoBehaviour
     Rigidbody2D rb;
     Collider2D collider;
     public LayerMask mask;
-    ContactPoint2D lastContact;
 
     // Start is called before the first frame update
     void Awake()
@@ -86,7 +85,9 @@ public class playerMovement : MonoBehaviour
             switch (newState)
             {
                 case State.JUMPING:
-                    animator.SetTrigger("Jump");                   
+                    animator.SetTrigger("Jump");
+                    playerSound.clip = jump;
+                    playerSound.Play();
                 break;
                 case State.WALKING:
                     animator.SetTrigger("Walk");
@@ -108,8 +109,6 @@ public class playerMovement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpForce);
             newState = State.JUMPING;
-            playerSound.clip = jump;
-            playerSound.Play();
         }
     }
 
@@ -142,21 +141,9 @@ public class playerMovement : MonoBehaviour
     {
         if (other.collider.tag == "Obstacle")
         {
-            lastContact = other.GetContact(0);
-            if (Vector2.Angle(-Vector3.up, lastContact.normal) <= 0.1f && currentState != State.JUMPING)
+            if (Vector2.Angle(-Vector3.up, other.GetContact(0).normal) <= 0.1f && currentState != State.JUMPING)
             {
                 GetComponent<playerDeath>().Die();
-            }
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.collider.tag == "Obstacle")
-        {
-            if (Vector2.Angle(Vector3.up, lastContact.normal) <= 0.1f && currentState != State.JUMPING)
-            {
-                newState = State.JUMPING;
             }
         }
     }
