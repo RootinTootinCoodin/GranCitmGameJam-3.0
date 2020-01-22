@@ -151,7 +151,7 @@ MonoBehaviour:
   speed: 7
   jumpForce: 600
   jump: {fileID: 8300000, guid: 5b08603fd8d2cf44d9c54252db813428, type: 3}
-  fallSound: {fileID: 8300000, guid: 8827a34e9a2d90244ab0237c3eb89bed, type: 3}
+  fallSound: {fileID: 8300000, guid: c4af25c0c2d02474ab9e8b22d903a1f1, type: 3}
 --- !u!114 &4574721034576947216
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winMenu: {fileID: 0}
   loseMenu: {fileID: 0}
-  winClip: {fileID: 8300000, guid: b0fe8fcb6b459d14baefdfd0262827c5, type: 3}
-  loseClip: {fileID: 8300000, guid: 0600fd6d87cb2bf4cae3cb378d71a4a4, type: 3}
+  winClip: {fileID: 8300000, guid: 4beebda4110fa054fb54133d2796e45f, type: 3}
+  loseClip: {fileID: 8300000, guid: 31b5f27bdd19a2a41bf6a07bdc7921c8, type: 3}
 --- !u!82 &6099170873734495624
 AudioSource:
   m_ObjectHideFlags: 0
