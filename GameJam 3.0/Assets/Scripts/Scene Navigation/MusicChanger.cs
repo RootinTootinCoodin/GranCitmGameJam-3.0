@@ -14,7 +14,9 @@ public class MusicChanger : MonoBehaviour
 
     public void OnStartGame()
     {
+        audioSource.Stop();
         audioSource.clip = clip;
+        audioSource.volume = 0.02f;
         audioSource.Play();
     }
 }
