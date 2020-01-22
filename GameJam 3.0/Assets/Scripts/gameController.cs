@@ -15,10 +15,27 @@ public class gameController : MonoBehaviour
 
     bool finished = false;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        finished = false;
+
+        winMenu = GameObject.FindGameObjectWithTag("Win");
+        winMenu.SetActive(false);
+
+        loseMenu = GameObject.FindGameObjectWithTag("Lose");
+        loseMenu.SetActive(false);
     }
 
     // Update is called once per frame
