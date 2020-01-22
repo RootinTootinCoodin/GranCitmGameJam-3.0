@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8559615816863310935}
   - component: {fileID: 8559615816863310928}
   - component: {fileID: 8559615816863310934}
+  - component: {fileID: 4391440091361173476}
   m_Layer: 0
   m_Name: MusicPlayer
   m_TagString: Untagged
@@ -140,3 +141,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec08ee11580ff4479c4a7780ddd6953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4391440091361173476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559615816863310929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c61a3dc89b6f8438429e78aa0700ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 73f625c31daaa09488804d82799bc375, type: 3}
