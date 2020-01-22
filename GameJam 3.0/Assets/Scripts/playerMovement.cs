@@ -106,7 +106,8 @@ public class playerMovement : MonoBehaviour
     {
         if (other.collider.tag == "Obstacle")
         {
-            if (other.GetContact(0).normal == Vector2.up)
+            Debug.Log(Vector2.Angle(Vector3.up, other.GetContact(0).normal));
+            if (Vector2.Angle(Vector3.up, other.GetContact(0).normal) <= 0.1f)
             {
 
                 if (currentState == State.JUMPING)
@@ -120,7 +121,7 @@ public class playerMovement : MonoBehaviour
                     playerSound.Play();
                 }
             }  
-            else if (other.GetContact(0).normal == -Vector2.up && currentState != State.JUMPING)
+            else if (Vector2.Angle(-Vector3.up, other.GetContact(0).normal) <= 0.1f && currentState != State.JUMPING)
             {
                 GetComponent<playerDeath>().Die();
             }
