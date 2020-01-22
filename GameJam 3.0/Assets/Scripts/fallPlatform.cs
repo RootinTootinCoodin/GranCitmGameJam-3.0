@@ -11,9 +11,12 @@ public class fallPlatform : MonoBehaviour
     bool falling = false;
     float time = 0.0f;
 
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class fallPlatform : MonoBehaviour
         if (!countdown && other.collider.tag == "Player")
         {
             countdown = true;
+            audioSource.Play();
             time = Time.time;
         }
         if (falling && other.collider.tag == "Obstacle")
