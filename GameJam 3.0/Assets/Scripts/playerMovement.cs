@@ -48,6 +48,8 @@ public class playerMovement : MonoBehaviour
 
         actions.Gameplay.Jump.performed += ctx => Jump();
 
+        actions.Gameplay.Reset.performed += ctx => ResetLevel();
+
         currentState = State.IDLE;
         newState = State.IDLE;
     }
@@ -100,6 +102,11 @@ public class playerMovement : MonoBehaviour
     {
         if (currentState == State.WALKING) newState = State.IDLE;
         movement = Vector2.zero;
+    }
+
+    void ResetLevel()
+    {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<gameController>().reloadScene();
     }
 
     void OnCollisionEnter2D(Collision2D other)
