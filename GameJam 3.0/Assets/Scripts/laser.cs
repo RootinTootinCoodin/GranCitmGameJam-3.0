@@ -7,10 +7,14 @@ public class laser : MonoBehaviour
 {
     colorGroup color;
 
+    AudioSource audioSource;
+
+
     // Start is called before the first frame update
     void Start()
     {
         color = GetComponent<colorGroup>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,5 +27,6 @@ public class laser : MonoBehaviour
     {
         col.gameObject.GetComponent<colorGroup>().color = color.color;
         col.gameObject.GetComponent<colorGroup>().UpdateColor();
+        if(audioSource) audioSource.Play();
     }
 }
