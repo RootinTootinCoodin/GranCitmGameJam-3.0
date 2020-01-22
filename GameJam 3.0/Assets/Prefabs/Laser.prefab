@@ -140,6 +140,7 @@ MonoBehaviour:
   colorGreen: {fileID: 11400000, guid: 7f9fdeda685d0e140850c7e323a7d7a0, type: 2}
   colorYellow: {fileID: 11400000, guid: 06332e82d1e268548854f497a3ef0d4d, type: 2}
   colorRed: {fileID: 11400000, guid: aed57c4ee4eda5c44b6753e84895b131, type: 2}
+<<<<<<< HEAD
 --- !u!114 &6169595266773628341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,4 +157,4 @@ MonoBehaviour:
   materialGreen: {fileID: 0}
   materialYellow: {fileID: 0}
   materialRed: {fileID: 0}
-
+>>>>>>> 80d55ac8610320cbb3ac27b6cc30e9d9185b3d44
