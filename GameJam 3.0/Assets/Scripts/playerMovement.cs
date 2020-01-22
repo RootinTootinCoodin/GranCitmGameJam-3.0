@@ -115,7 +115,11 @@ public class playerMovement : MonoBehaviour
                     else
                         newState = State.WALKING;
                 }
-            }         
+            }  
+            else if (other.GetContact(0).normal == -Vector2.up && currentState != State.JUMPING)
+            {
+                GetComponent<playerDeath>().Die();
+            }
         }
     }
 
