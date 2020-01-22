@@ -10,7 +10,6 @@ public class objectivesDisplay : MonoBehaviour
 
     public GameObject step;
     public bool isPreview = false;
-    public objectivesDisplay reference;
 
     public enum Objectives
     {

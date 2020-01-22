@@ -24,6 +24,10 @@ public class playerMovement : MonoBehaviour
     Animator animator;
     SpriteRenderer sprite;
 
+    AudioSource playerSound;
+    public AudioClip jump;
+    public AudioClip fallSound;
+
     Vector2 movement;
     Rigidbody2D rb;
 
@@ -33,6 +37,9 @@ public class playerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        playerSound = GetComponent<AudioSource>();
+
+
 
         actions = new PlayerActions();
 
@@ -55,6 +62,8 @@ public class playerMovement : MonoBehaviour
             {
                 case State.JUMPING:
                     animator.SetTrigger("Jump");
+                    playerSound.clip = jump;
+                    playerSound.Play();
                 break;
                 case State.WALKING:
                     animator.SetTrigger("Walk");
@@ -106,8 +115,15 @@ public class playerMovement : MonoBehaviour
                         newState = State.IDLE;
                     else
                         newState = State.WALKING;
+
+                    playerSound.clip = fallSound;
+                    playerSound.Play();
                 }
-            }         
+            }  
+            else if (other.GetContact(0).normal == -Vector2.up && currentState != State.JUMPING)
+            {
+                GetComponent<playerDeath>().Die();
+            }
         }
     }
 
