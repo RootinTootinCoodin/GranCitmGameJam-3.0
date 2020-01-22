@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4100096658958549880, guid: f96575228a437f34096979f8debfbb73,
+        type: 3}
+      propertyPath: m_Name
+      value: MovingPlatform1way
+      objectReference: {fileID: 0}
     - target: {fileID: 3712440543877072411, guid: f96575228a437f34096979f8debfbb73,
         type: 3}
       propertyPath: m_Name
@@ -71,11 +76,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UseOneWay
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4100096658958549880, guid: f96575228a437f34096979f8debfbb73,
-        type: 3}
-      propertyPath: m_Name
-      value: MovingPlatform1way
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96575228a437f34096979f8debfbb73, type: 3}

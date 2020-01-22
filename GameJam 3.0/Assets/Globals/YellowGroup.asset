@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d7504d63f3ab34884eafa5e2c01306, type: 3}
   m_Name: YellowGroup
   m_EditorClassIdentifier: 
-  initialValue: {r: 0, g: 1, b: 0.92941177, a: 1}
+  initialValue: {r: 1, g: 1, b: 0, a: 1}

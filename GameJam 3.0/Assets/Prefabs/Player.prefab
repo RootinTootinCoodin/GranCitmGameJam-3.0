@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4725834260588841715}
   - component: {fileID: 4215003491435053283}
   - component: {fileID: 1797074209721269874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: fb9af51ac7dc9f049b176c0a45718e3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 5638909855141247568, guid: 627e14dc2319e724781b9b17028c1e76,
+  m_Sprite: {fileID: -833879886147705458, guid: bac605873e906fa4a83bff88fd6e0434,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -127,7 +127,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.9564516, y: 2.4292896}
+    oldSize: {x: 0.9548387, y: 2.4310317}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -197,10 +197,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849cb8d2350de174cbbe3bf692fd4500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 0
+  color: 1
   colorGreen: {fileID: 11400000, guid: 7f9fdeda685d0e140850c7e323a7d7a0, type: 2}
   colorYellow: {fileID: 11400000, guid: 06332e82d1e268548854f497a3ef0d4d, type: 2}
   colorRed: {fileID: 11400000, guid: aed57c4ee4eda5c44b6753e84895b131, type: 2}
+  materialGreen: {fileID: 2100000, guid: fb9af51ac7dc9f049b176c0a45718e3c, type: 2}
+  materialYellow: {fileID: 2100000, guid: b477ec978897476438c5ab417d7d5d87, type: 2}
+  materialRed: {fileID: 2100000, guid: 4d958ae701297ba4faaeccac204766b4, type: 2}
 --- !u!82 &1797074209721269874
 AudioSource:
   m_ObjectHideFlags: 0
@@ -210,7 +213,8 @@ AudioSource:
   m_GameObject: {fileID: 8934253561502169884}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a0f42be2aa178b9408c6fcc4e62e7ad5,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

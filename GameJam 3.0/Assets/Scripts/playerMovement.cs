@@ -48,6 +48,8 @@ public class playerMovement : MonoBehaviour
 
         actions.Gameplay.Jump.performed += ctx => Jump();
 
+        actions.Gameplay.Reset.performed += ctx => ResetLevel();
+
         currentState = State.IDLE;
         newState = State.IDLE;
     }
@@ -102,11 +104,17 @@ public class playerMovement : MonoBehaviour
         movement = Vector2.zero;
     }
 
+    void ResetLevel()
+    {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<gameController>().reloadScene();
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.tag == "Obstacle")
         {
-            if (other.GetContact(0).normal == Vector2.up)
+            Debug.Log(Vector2.Angle(Vector3.up, other.GetContact(0).normal));
+            if (Vector2.Angle(Vector3.up, other.GetContact(0).normal) <= 0.1f)
             {
 
                 if (currentState == State.JUMPING)
@@ -120,7 +128,7 @@ public class playerMovement : MonoBehaviour
                     playerSound.Play();
                 }
             }  
-            else if (other.GetContact(0).normal == -Vector2.up && currentState != State.JUMPING)
+            else if (Vector2.Angle(-Vector3.up, other.GetContact(0).normal) <= 0.1f && currentState != State.JUMPING)
             {
                 GetComponent<playerDeath>().Die();
             }

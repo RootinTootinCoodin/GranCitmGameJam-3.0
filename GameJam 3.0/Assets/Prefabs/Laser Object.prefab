@@ -12,7 +12,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ee0ce274039d48341ac17ceaa0241d89, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -446,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 8739777116599831243, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.8784314
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3147919993205978327, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
         type: 3}
@@ -557,7 +557,7 @@ PrefabInstance:
     - target: {fileID: 8739777116599831243, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.8784314
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3147919993205978327, guid: cfc0a2a7e152e60489a5c97cdfdbd579,
         type: 3}
