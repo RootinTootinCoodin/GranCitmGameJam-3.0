@@ -82,6 +82,7 @@ public class objectivesDisplay : MonoBehaviour
 
     public void Win()
     {
+        Debug.Log("Win");
         GameObject.FindGameObjectWithTag("GameController").GetComponent<gameController>().Win();
     }
 
