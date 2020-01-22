@@ -74,4 +74,9 @@ public class gameController : MonoBehaviour
 
         reloadScene();
     }
+
+    public void loadIndexScene(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
 }

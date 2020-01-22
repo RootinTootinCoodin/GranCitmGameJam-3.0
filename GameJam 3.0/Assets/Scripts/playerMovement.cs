@@ -50,8 +50,15 @@ public class playerMovement : MonoBehaviour
 
         actions.Gameplay.Reset.performed += ctx => ResetLevel();
 
+        actions.Gameplay.Menu.performed += ctx => mainMenu();
+
         currentState = State.IDLE;
         newState = State.IDLE;
+    }
+
+    void Start()
+    {
+        Stop();
     }
 
     // Update is called once per frame
@@ -102,11 +109,17 @@ public class playerMovement : MonoBehaviour
     {
         if (currentState == State.WALKING) newState = State.IDLE;
         movement = Vector2.zero;
+        rb.velocity = Vector2.up * rb.velocity;
     }
 
     void ResetLevel()
     {
         GameObject.FindGameObjectWithTag("GameController").GetComponent<gameController>().reloadScene();
+    }
+
+    void mainMenu()
+    {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<gameController>().loadIndexScene(0);
     }
 
     void OnCollisionEnter2D(Collision2D other)
