@@ -32,6 +32,7 @@ public class playerMovement : MonoBehaviour
     Rigidbody2D rb;
     Collider2D collider;
     public LayerMask mask;
+    ContactPoint2D lastContact;
 
     // Start is called before the first frame update
     void Awake()
@@ -66,9 +67,13 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        if (currentState == State.JUMPING && Physics2D.Raycast(collider.bounds.center, Vector2.down, collider.bounds.extents.y + 0.05f, mask))
+        RaycastHit2D hit = Physics2D.Raycast(collider.bounds.center, Vector2.down, collider.bounds.extents.y + 0.05f, mask);
+        if (currentState == State.JUMPING && hit.collider != null && hit.collider.tag == "Obstacle")
         {
             newState = State.IDLE;
+
+            playerSound.clip = fallSound;
+            playerSound.Play();
         }
     }
 
@@ -81,9 +86,7 @@ public class playerMovement : MonoBehaviour
             switch (newState)
             {
                 case State.JUMPING:
-                    animator.SetTrigger("Jump");
-                    playerSound.clip = jump;
-                    playerSound.Play();
+                    animator.SetTrigger("Jump");                   
                 break;
                 case State.WALKING:
                     animator.SetTrigger("Walk");
@@ -105,6 +108,8 @@ public class playerMovement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpForce);
             newState = State.JUMPING;
+            playerSound.clip = jump;
+            playerSound.Play();
         }
     }
 
@@ -137,24 +142,21 @@ public class playerMovement : MonoBehaviour
     {
         if (other.collider.tag == "Obstacle")
         {
-            Debug.Log(Vector2.Angle(Vector3.up, other.GetContact(0).normal));
-            if (Vector2.Angle(Vector3.up, other.GetContact(0).normal) <= 0.1f)
-            {
-
-                if (currentState == State.JUMPING)
-                {
-                    if (movement.x == 0)
-                        newState = State.IDLE;
-                    else
-                        newState = State.WALKING;
-
-                    playerSound.clip = fallSound;
-                    playerSound.Play();
-                }
-            }  
-            else if (Vector2.Angle(-Vector3.up, other.GetContact(0).normal) <= 0.1f && currentState != State.JUMPING)
+            lastContact = other.GetContact(0);
+            if (Vector2.Angle(-Vector3.up, lastContact.normal) <= 0.1f && currentState != State.JUMPING)
             {
                 GetComponent<playerDeath>().Die();
+            }
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.collider.tag == "Obstacle")
+        {
+            if (Vector2.Angle(Vector3.up, lastContact.normal) <= 0.1f && currentState != State.JUMPING)
+            {
+                newState = State.JUMPING;
             }
         }
     }
@@ -168,4 +170,10 @@ public class playerMovement : MonoBehaviour
     {
         actions.Gameplay.Disable();
     }
+
+    /*void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(collider.bounds.center, collider.bounds.center + Vector3.down * (collider.bounds.extents.y + 0.05f));
+    }*/
 }
