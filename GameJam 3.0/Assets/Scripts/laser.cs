@@ -26,7 +26,7 @@ public class laser : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         col.gameObject.GetComponent<colorGroup>().color = color.color;
-        col.gameObject.GetComponent<colorGroup>().UpdateColor();
+        col.gameObject.GetComponent<colorGroup>().UpdateMaterial();
         if(audioSource) audioSource.Play();
     }
 }

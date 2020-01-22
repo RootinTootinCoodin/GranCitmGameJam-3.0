@@ -11,6 +11,10 @@ public class colorGroup : MonoBehaviour
     public colorTemplate colorYellow;
     public colorTemplate colorRed;
 
+    public Material materialGreen;
+    public Material materialYellow;
+    public Material materialRed;
+
     SpriteRenderer sprite;
 
     public void UpdateColor()
@@ -44,9 +48,42 @@ public class colorGroup : MonoBehaviour
         }
     }
 
+    public void UpdateMaterial()
+    {
+        if (sprite == null)
+        {
+            sprite = GetComponent<SpriteRenderer>();
+        }
+
+        if (color != 0)
+        {
+            gameObject.layer = layermask_to_layer(1 << (7 + color));
+
+            if (color == 1)
+            {
+                sprite.material = materialGreen;
+            }
+            else if (color == 2)
+            {
+                sprite.material = materialYellow;
+            }
+            else if (color == 3)
+            {
+                sprite.material = materialRed;
+            }
+        }
+    }
+
     void OnValidate()
     {
-        UpdateColor();
+        if (gameObject.tag == "Player")
+        {
+            UpdateMaterial();
+        }
+        else
+        {
+            UpdateColor();
+        }
     }
 
     public static int layermask_to_layer(LayerMask layerMask)
